@@ -21,5 +21,9 @@
             android:id="@+id/action_secondFragment_to_firstFragment"
             app:destination="@id/firstFragment"
             app:enterAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="datatransfer"
+            app:argType="string"
+            android:defaultValue='"Veri Aktar"' />
     </fragment>
 </navigation>

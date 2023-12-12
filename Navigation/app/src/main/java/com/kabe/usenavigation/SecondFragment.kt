@@ -28,9 +28,16 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding : FragmentSecondBinding = FragmentSecondBinding.bind(view)
+
+        arguments?.let {
+            val dataTransfer = SecondFragmentArgs.fromBundle(it).datatransfer
+            binding.textView.text = dataTransfer
+        }
+
         binding.buttonBack.setOnClickListener {
             val action = SecondFragmentDirections.actionSecondFragmentToFirstFragment()
             Navigation.findNavController(it).navigate(action)
+
         }
     }
 }

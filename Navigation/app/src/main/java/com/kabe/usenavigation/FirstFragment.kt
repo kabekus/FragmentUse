@@ -31,7 +31,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding : FragmentFirstBinding = FragmentFirstBinding.bind(view)
         binding.buttonNext.setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment()
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("Veri aktarımı tamamlandı")
             Navigation.findNavController(it).navigate(action)
         }
     }
